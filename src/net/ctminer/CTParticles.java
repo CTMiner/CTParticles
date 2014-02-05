@@ -34,6 +34,10 @@ public class CTParticles extends JavaPlugin {
 		}
 		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Ticker(this), 0, 1);
 		getCommand("ctp").setExecutor(new CTPCMD(this));
+		getCommand("aura").setExecutor(new AuraCmd(this));
+		getCommand("halo").setExecutor(new HaloCmd(this));
+		getCommand("trail").setExecutor(new TrailCmd(this));
+		getCommand("firework").setExecutor(new FireworkCmd(this));
 		getServer().getPluginManager().registerEvents(new Listeners(this), this);
 	}
 	
