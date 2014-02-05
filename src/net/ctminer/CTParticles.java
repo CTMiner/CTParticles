@@ -5,6 +5,9 @@ import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+// This is based on @DarkBlade12's particle class
+// Thread: http://forums.bukkit.org/threads/lib-1-7-particleeffect-v1-3.154406/
+
 public class CTParticles extends JavaPlugin {
 	
 	public File trailsdir;
@@ -21,6 +24,7 @@ public class CTParticles extends JavaPlugin {
 				getLogger().log(Level.SEVERE, "[CTParticles] ERROR: UNABLE TO EITHER LOAD OR CREATE THE TRAILS DIRECTORY");
 			}
 		}
+		
 	}
 	
 }
