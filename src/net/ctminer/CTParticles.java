@@ -11,7 +11,7 @@ public class CTParticles extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		trailsdir = new File(getDataFolder().getPath() + File.pathSeparator + "trails");
+		trailsdir = new File(getDataFolder().getPath() + File.separator + "trails");
 		if(trailsdir.exists() && trailsdir.isDirectory()) {
 			getLogger().log(Level.INFO, "[CTParticles] Successfully loaded the trails directory");
 		} else {

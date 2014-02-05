@@ -1,5 +1,5 @@
 name: CTParticles
-version: 0.0.1
+version: 0.0.2
 main: net.ctminer.CTParticles
 author: CTMiner
 commands:
