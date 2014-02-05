@@ -6,8 +6,10 @@ import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-// This is based on @DarkBlade12's particle class
+// This uses @DarkBlade12's particle library
 // Thread: http://forums.bukkit.org/threads/lib-1-7-particleeffect-v1-3.154406/
+// This also uses codename_B's FireworkEffectPlayer class
+// Thread: https://forums.bukkit.org/threads/util-fireworkeffectplayer-v1-0.119424/
 
 public class CTParticles extends JavaPlugin {
 	

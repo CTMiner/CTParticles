@@ -6,3 +6,15 @@ commands:
   ctp:
     description: CTParticles main command
     usage: See /ctp help
+  aura:
+    description: CTParticles aura command
+    usage: See /ctp help
+  halo:
+    description: CTParticles halo command
+    usage: See /ctp help
+  trail:
+    description: CTParticles trail command
+    usage: See /ctp help
+  firework:
+    description: CTParticles firework command
+    usage: See /ctp help
