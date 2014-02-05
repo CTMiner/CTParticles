@@ -32,7 +32,7 @@ public class CTParticles extends JavaPlugin {
 		}
 		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Ticker(this), 0, 1);
 		getCommand("ctp").setExecutor(new CTPCMD(this));
-		// NEED TO ADD LISTENER TO REMOVE THE PLAYER FROM THE HASHMAP ON LOGOUT
+		getServer().getPluginManager().registerEvents(new Listeners(this), this);
 	}
 	
 }
