@@ -1,0 +1,8 @@
+name: CTParticles
+version: 0.0.1
+main: net.ctminer.CTParticles
+author: CTMiner
+commands:
+  ctp:
+    description: CTParticles main command
+    usage: See /ctp help
