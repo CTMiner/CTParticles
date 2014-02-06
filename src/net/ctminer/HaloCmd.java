@@ -50,12 +50,12 @@ public class HaloCmd implements CommandExecutor{
 				if(args.length >= 2 && ((Integer) Integer.parseInt(args[1]) instanceof Integer)) {
 					if(!p.hasPermission("ctparticles.halo.speed")) {
 						p.sendMessage("You do not have permission to set the speed of your halo particles.");
-						plugin.auraspeed.put(p.getName(), 0);
+						plugin.halospeed.put(p.getName(), 0);
 					} else {
-						plugin.auraspeed.put(p.getName(), Integer.parseInt(args[1]));
+						plugin.halospeed.put(p.getName(), Integer.parseInt(args[1]));
 					}
 				} else {
-					plugin.auraspeed.put(p.getName(), 0);
+					plugin.halospeed.put(p.getName(), 0);
 				}
 			} catch (Exception e) {
 			}
