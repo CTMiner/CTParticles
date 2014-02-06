@@ -1,5 +1,5 @@
 name: CTParticles
-version: 0.3.3
+version: 0.3.4
 main: net.ctminer.CTParticles
 author: CTMiner
 commands:
@@ -19,73 +19,143 @@ commands:
     description: CTParticles firework command
     usage: See /ctp help
 permissions:
-  ctparticles.aura.set: op
-  ctparticles.aura.particle.hugeexplosion: false # does not appear
-  ctparticles.aura.particle.largeexplode: false # does not appear
-  ctparticles.aura.particle.fireworksSpark: op
-  ctparticles.aura.particle.bubble: op # note: only works in water
-  ctparticles.aura.particle.suspend: false # does not appear
-  ctparticles.aura.particle.depthSuspend: op # works only in water and near the void, and only barely visible
-  ctparticles.aura.particle.townaura: op
-  ctparticles.aura.particle.crit: op
-  ctparticles.aura.particle.magicCrit: op
-  ctparticles.aura.particle.mobSpell: op
-  ctparticles.aura.particle.mobSpellAmbient: op
-  ctparticles.aura.particle.spell: op
-  ctparticles.aura.particle.instantSpell: op
-  ctparticles.aura.particle.witchMagic: op
-  ctparticles.aura.particle.note: op
-  ctparticles.aura.particle.portal: op
-  ctparticles.aura.particle.enchantmenttable: op
-  ctparticles.aura.particle.explode: op
-  ctparticles.aura.particle.flame: op
-  ctparticles.aura.particle.lava: op
-  ctparticles.aura.particle.footstep: op
-  ctparticles.aura.particle.splash: op
-  ctparticles.aura.particle.largesmoke: op
-  ctparticles.aura.particle.cloud: op
-  ctparticles.aura.particle.reddust: op
-  ctparticles.aura.particle.snowballPoof: op
-  ctparticles.aura.particle.dripWater: op
-  ctparticles.aura.particle.dripLava: op
-  ctparticles.aura.particle.snowshovel: op
-  ctparticles.aura.particle.slime: op
-  ctparticles.aura.particle.heart: op
-  ctparticles.aura.particle.angryVillager: op
-  ctparticles.aura.particle.happyVillager: op
-  ctparticles.aura.speed: op
-  ctparticles.aura.amount: op
-  ctparticles.halo.set: op
-  ctparticles.halo.particle.hugeexplosion: false # does not appear
-  ctparticles.halo.particle.largeexplode: false # does not appear
-  ctparticles.halo.particle.fireworksSpark: op
-  ctparticles.halo.particle.bubble: op # note: only works in water
-  ctparticles.halo.particle.suspend: false # does not appear
-  ctparticles.halo.particle.depthSuspend: false # not really good for this & see note on aura entry
-  ctparticles.halo.particle.townaura: op
-  ctparticles.halo.particle.crit: op
-  ctparticles.halo.particle.magicCrit: op
-  ctparticles.halo.particle.mobSpell: op
-  ctparticles.halo.particle.mobSpellAmbient: op
-  ctparticles.halo.particle.spell: op
-  ctparticles.halo.particle.instantSpell: op
-  ctparticles.halo.particle.witchMagic: op
-  ctparticles.halo.particle.note: op
-  ctparticles.halo.particle.portal: op
-  ctparticles.halo.particle.enchantmenttable: op
-  ctparticles.halo.particle.explode: false # not really good for this
-  ctparticles.halo.particle.flame: op
-  ctparticles.halo.particle.lava: false # not really good for this
-  ctparticles.halo.particle.footstep: false # not really good for this
-  ctparticles.halo.particle.splash: op
-  ctparticles.halo.particle.largesmoke: op
-  ctparticles.halo.particle.cloud: op
-  ctparticles.halo.particle.reddust: op
-  ctparticles.halo.particle.snowballPoof: false # not really good for this
-  ctparticles.halo.particle.dripWater: op
-  ctparticles.halo.particle.dripLava: op
-  ctparticles.halo.particle.snowshovel: op
-  ctparticles.halo.particle.slime: false # not really good for this
-  ctparticles.halo.particle.heart: op
-  ctparticles.halo.particle.angryVillager: op
-  ctparticles.halo.particle.happyVillager: op
+  ctparticles.aura.set:
+    default: op
+  ctparticles.aura.particle.hugeexplosion:
+    default: false # does not appear
+  ctparticles.aura.particle.largeexplode:
+    default: false # does not appear
+  ctparticles.aura.particle.fireworksSpark:
+    default: op
+  ctparticles.aura.particle.bubble:
+    default: op # note: only works in water
+  ctparticles.aura.particle.suspend:
+    default: false # does not appear
+  ctparticles.aura.particle.depthSuspend:
+    default: op # works only in water and near the void, and only barely visible
+  ctparticles.aura.particle.townaura:
+    default: op
+  ctparticles.aura.particle.crit:
+    default: op
+  ctparticles.aura.particle.magicCrit:
+    default: op
+  ctparticles.aura.particle.mobSpell:
+    default: op
+  ctparticles.aura.particle.mobSpellAmbient:
+    default: op
+  ctparticles.aura.particle.spell:
+    default: op
+  ctparticles.aura.particle.instantSpell:
+    default: op
+  ctparticles.aura.particle.witchMagic:
+    default: op
+  ctparticles.aura.particle.note:
+    default: op
+  ctparticles.aura.particle.portal:
+    default: op
+  ctparticles.aura.particle.enchantmenttable:
+    default: op
+  ctparticles.aura.particle.explode:
+    default: op
+  ctparticles.aura.particle.flame:
+    default: op
+  ctparticles.aura.particle.lava:
+    default: op
+  ctparticles.aura.particle.footstep:
+    default: op
+  ctparticles.aura.particle.splash:
+    default: op
+  ctparticles.aura.particle.largesmoke:
+    default: op
+  ctparticles.aura.particle.cloud:
+    default: op
+  ctparticles.aura.particle.reddust:
+    default: op
+  ctparticles.aura.particle.snowballPoof:
+    default: op
+  ctparticles.aura.particle.dripWater:
+    default: op
+  ctparticles.aura.particle.dripLava:
+    default: op
+  ctparticles.aura.particle.snowshovel:
+    default: op
+  ctparticles.aura.particle.slime:
+    default: op
+  ctparticles.aura.particle.heart:
+    default: op
+  ctparticles.aura.particle.angryVillager:
+    default: op
+  ctparticles.aura.particle.happyVillager:
+    default: op
+  ctparticles.aura.speed:
+    default: op
+  ctparticles.aura.amount:
+    default: op
+  ctparticles.halo.set:
+    default: op
+  ctparticles.halo.particle.hugeexplosion:
+    default: false # does not appear
+  ctparticles.halo.particle.largeexplode:
+    default: false # does not appear
+  ctparticles.halo.particle.fireworksSpark:
+    default: op
+  ctparticles.halo.particle.bubble:
+    default: op # note: only works in water
+  ctparticles.halo.particle.suspend:
+    default: false # does not appear
+  ctparticles.halo.particle.depthSuspend:
+    default: false # not really good for this & see note on aura entry
+  ctparticles.halo.particle.townaura:
+    default: op
+  ctparticles.halo.particle.crit:
+    default: op
+  ctparticles.halo.particle.magicCrit:
+    default: op
+  ctparticles.halo.particle.mobSpell:
+    default: op
+  ctparticles.halo.particle.mobSpellAmbient:
+    default: op
+  ctparticles.halo.particle.spell:
+    default: op
+  ctparticles.halo.particle.instantSpell:
+    default: op
+  ctparticles.halo.particle.witchMagic:
+    default: op
+  ctparticles.halo.particle.note:
+    default: op
+  ctparticles.halo.particle.portal:
+    default: op
+  ctparticles.halo.particle.enchantmenttable:
+    default: op
+  ctparticles.halo.particle.explode:
+    default: false # not really good for this
+  ctparticles.halo.particle.flame:
+    default: op
+  ctparticles.halo.particle.lava:
+    default: false # not really good for this
+  ctparticles.halo.particle.footstep:
+    default: false # not really good for this
+  ctparticles.halo.particle.splash:
+    default: op
+  ctparticles.halo.particle.largesmoke:
+    default: op
+  ctparticles.halo.particle.cloud:
+    default: op
+  ctparticles.halo.particle.reddust:
+    default: op
+  ctparticles.halo.particle.snowballPoof:
+    default: false # not really good for this
+  ctparticles.halo.particle.dripWater:
+    default: op
+  ctparticles.halo.particle.dripLava:
+    default: op
+  ctparticles.halo.particle.snowshovel:
+    default: op
+  ctparticles.halo.particle.slime:
+    default: false # not really good for this
+  ctparticles.halo.particle.heart:
+    default: op
+  ctparticles.halo.particle.angryVillager:
+    default: op
+  ctparticles.halo.particle.happyVillager:
+    default: op
