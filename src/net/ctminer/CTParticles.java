@@ -19,6 +19,7 @@ public class CTParticles extends JavaPlugin {
 	public HashMap<String, Integer> auraamount = new HashMap<String, Integer>();
 	public HashMap<String, String> halochoice = new HashMap<String, String>();
 	public HashMap<String, String> trailchoice = new HashMap<String, String>();
+	public HashMap<String, Integer> halospeed = new HashMap<String, Integer>();
 	
 	@Override
 	public void onEnable() {

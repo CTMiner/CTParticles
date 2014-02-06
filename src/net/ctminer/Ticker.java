@@ -34,18 +34,18 @@ public class Ticker implements Runnable {
 				Location h10 = new Location(halocenter.getWorld(), (halocenter.getX()), halocenter.getY(), (halocenter.getZ() - .5));
 				Location h11 = new Location(halocenter.getWorld(), (halocenter.getX() + .25), halocenter.getY(), (halocenter.getZ() - .43));
 				Location h12 = new Location(halocenter.getWorld(), (halocenter.getX() + .43), halocenter.getY(), (halocenter.getZ() - .25));
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h1, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h2, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h3, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h4, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h5, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h6, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h7, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h8, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h9, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h10, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h11, 0, 0, 0, 0, 1);
-				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h12, 0, 0, 0, 0, 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h1, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h2, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h3, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h4, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h5, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h6, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h7, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h8, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h9, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h10, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h11, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
+				ParticleEffect.fromName(plugin.halochoice.get(p.getName())).display(h12, 0, 0, 0, ((plugin.halospeed.containsKey(p.getName()) ? plugin.halospeed.get(p.getName()) : 0)), 1);
 			}
 		}
 	}

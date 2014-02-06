@@ -21,7 +21,7 @@ public class HaloCmd implements CommandExecutor{
 			Player p = (Player) sender;
 			try {
 				if(args.length < 1 || args[0].equalsIgnoreCase("help")) {
-					p.sendMessage("Halo help: /halo [name]");
+					p.sendMessage("Halo help: /halo [name] [speed/data]");
 					return true;
 				}
 				if(args[0].equalsIgnoreCase("clear") || args[0].equalsIgnoreCase("remove")) {
@@ -46,6 +46,16 @@ public class HaloCmd implements CommandExecutor{
 					plugin.halochoice.put(p.getName(), args[0]);
 				} else {
 					p.sendMessage("Invalid particle name.");
+				}
+				if(args.length >= 2 && ((Integer) Integer.parseInt(args[1]) instanceof Integer)) {
+					if(!p.hasPermission("ctparticles.halo.speed")) {
+						p.sendMessage("You do not have permission to set the speed of your halo particles.");
+						plugin.auraspeed.put(p.getName(), 0);
+					} else {
+						plugin.auraspeed.put(p.getName(), Integer.parseInt(args[1]));
+					}
+				} else {
+					plugin.auraspeed.put(p.getName(), 0);
 				}
 			} catch (Exception e) {
 			}
