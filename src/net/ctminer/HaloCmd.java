@@ -20,7 +20,7 @@ public class HaloCmd implements CommandExecutor{
 		} else {
 			Player p = (Player) sender;
 			try {
-				if(args.length < 2 || args[0].equalsIgnoreCase("help")) {
+				if(args.length < 1 || args[0].equalsIgnoreCase("help")) {
 					p.sendMessage("Halo help: /halo [name]");
 					return true;
 				}
