@@ -19,7 +19,7 @@ public class Ticker implements Runnable {
 				Location playermiddle = new Location(l.getWorld(), l.getX(), (l.getY() + 1), l.getZ());
 				ParticleEffect.fromName(plugin.aurachoice.get(p.getName())).display(playermiddle, (float) .25, (float) 1, (float) .25, ((plugin.auraspeed.containsKey(p.getName()) ? plugin.auraspeed.get(p.getName()) : 0)), ((plugin.auraamount.containsKey(p.getName()) ? plugin.auraamount.get(p.getName()) : 3)));
 			}
-			if(plugin.halochoice.containsKey(p.getName())) {
+			if(((System.currentTimeMillis() % 3) == 0) && plugin.halochoice.containsKey(p.getName())) {
 				Location halocenter = l;
 				halocenter.setY(halocenter.getY() + 2);
 				Location h1 = new Location(halocenter.getWorld(), (halocenter.getX() + .5), halocenter.getY(), (halocenter.getZ()));
