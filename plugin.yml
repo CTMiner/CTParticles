@@ -1,5 +1,5 @@
 name: CTParticles
-version: 0.3.2
+version: 0.3.3
 main: net.ctminer.CTParticles
 author: CTMiner
 commands:
@@ -8,10 +8,10 @@ commands:
     usage: See /ctp help
   aura:
     description: CTParticles aura command
-    usage: See /ctp help
+    usage: /aura [help/clear/remove/particle name] [speed] [amount]
   halo:
     description: CTParticles halo command
-    usage: See /ctp help
+    usage: /halo [clear/particle name]
   trail:
     description: CTParticles trail command
     usage: See /ctp help
