@@ -19,42 +19,38 @@ public class HaloCmd implements CommandExecutor{
 			sender.sendMessage("Only players can run this command.");
 		} else {
 			Player p = (Player) sender;
-			if (args[0].equalsIgnoreCase("halo")) {
-				try {
-					if(ParticleEffect.fromName(args[1]) != null) {
-						if(plugin.aurachoice.containsKey(p.getName())) {
-							plugin.aurachoice.remove(p.getName());
-						}
-						if(plugin.auraspeed.containsKey(p.getName())) {
-							plugin.auraspeed.remove(p.getName());
-						}
-						if(plugin.auraamount.containsKey(p.getName())) {
-							plugin.auraamount.remove(p.getName());
-						}
-						plugin.aurachoice.put(p.getName(), args[1]);
-						if(args.length >= 3 && (args[2].equalsIgnoreCase("true") || ((Integer) Integer.parseInt(args[2]) instanceof Integer))) {
-							plugin.auraspeed.put(p.getName(), (args[2].equalsIgnoreCase("true") ? 5 : Integer.parseInt(args[2])));
-						} else {
-							plugin.auraspeed.put(p.getName(), 0);
-						}
-						if(args.length >= 4 && ((Integer) Integer.parseInt(args[3]) instanceof Integer)) {
-							if(Integer.parseInt(args[3]) <= 0) {
-								p.sendMessage("Amount of particles has to be >0. Defaulted to 3.");
-								plugin.auraamount.put(p.getName(), 3);
-							} else {
-								plugin.auraamount.put(p.getName(), (args[3].equalsIgnoreCase("true") ? 5 : Integer.parseInt(args[3])));
-							}
-						} else {
-							plugin.auraamount.put(p.getName(), 3);
-						}
-					} else {
-						p.sendMessage("Either you used an invalid particle name, or an error occurred.");
-					}
-				} catch (Exception e) {
+			try {
+				if(args.length < 2 || args[0].equalsIgnoreCase("help")) {
+					p.sendMessage("Halo help: /halo [name]");
+					return true;
 				}
+				if(args[0].equalsIgnoreCase("clear") || args[0].equalsIgnoreCase("remove")) {
+					if(plugin.halochoice.containsKey(p.getName())) {
+						plugin.halochoice.remove(p.getName());
+						p.sendMessage("Halo has been removed.");
+						return true;
+					}
+				}
+				if(!p.hasPermission("ctparticles.halo.set")) {
+					p.sendMessage("You do not have permission to set your own particle halo.");
+					return true;
+				}
+				if(ParticleEffect.fromName(args[0]) != null) {
+					if(!p.hasPermission("ctparticles.halo.particle." + args[0])) {
+						p.sendMessage("You do not have permission to use that particle.");
+						return true;
+					}
+					if(plugin.halochoice.containsKey(p.getName())) {
+						plugin.halochoice.remove(p.getName());
+					}
+					plugin.halochoice.put(p.getName(), args[0]);
+				} else {
+					p.sendMessage("Invalid particle name.");
+				}
+			} catch (Exception e) {
 			}
 		}
-		return false;
+		return true;
 	}
 
 }
