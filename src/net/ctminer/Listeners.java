@@ -23,6 +23,12 @@ public class Listeners implements Listener {
 		if(plugin.auraamount.containsKey(evt.getPlayer().getName())) {
 			plugin.auraamount.remove(evt.getPlayer().getName());
 		}
+		if(plugin.halochoice.containsKey(evt.getPlayer().getName())) {
+			plugin.halochoice.remove(evt.getPlayer().getName());
+		}
+		if(plugin.halospeed.containsKey(evt.getPlayer().getName())) {
+			plugin.halospeed.remove(evt.getPlayer().getName());
+		}
 	}
 	
 }
