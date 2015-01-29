@@ -1,7 +1,8 @@
 name: CTParticles
-version: 0.3.12
-main: net.ctminer.CTParticles
+version: 0.4.1
+main: net.ctminer.CTParticles.CTParticles
 author: CTMiner
+website: http://ctminer.net/
 commands:
   ctp:
     description: CTParticles main command
@@ -160,4 +161,6 @@ permissions:
   ctparticles.halo.particle.happyVillager:
     default: op
   ctparticles.halo.speed:
+    default: op
+  ctparticles.range:
     default: op
