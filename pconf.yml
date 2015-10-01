@@ -1,0 +1,10 @@
+# Player config
+global:
+  range: -1
+aura:
+  choice: ''
+  speed: -1
+  amount: -1
+halo:
+  choice: ''
+  speed: -1
